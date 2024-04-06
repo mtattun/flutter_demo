@@ -9,6 +9,7 @@ class ArticleCategoryModel with _$ArticleCategoryModel {
   const factory ArticleCategoryModel({
     @Default('') String id,
     @Default('') String name,
+    @Default('') String imageUrl,
   }) = _ArticleCategoryModel;
 
   factory ArticleCategoryModel.fromJson(Map<String, dynamic> json) =>

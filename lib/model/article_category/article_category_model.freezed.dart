@@ -22,6 +22,7 @@ ArticleCategoryModel _$ArticleCategoryModelFromJson(Map<String, dynamic> json) {
 mixin _$ArticleCategoryModel {
   String get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
+  String get imageUrl => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -35,7 +36,7 @@ abstract class $ArticleCategoryModelCopyWith<$Res> {
           $Res Function(ArticleCategoryModel) then) =
       _$ArticleCategoryModelCopyWithImpl<$Res, ArticleCategoryModel>;
   @useResult
-  $Res call({String id, String name});
+  $Res call({String id, String name, String imageUrl});
 }
 
 /// @nodoc
@@ -54,6 +55,7 @@ class _$ArticleCategoryModelCopyWithImpl<$Res,
   $Res call({
     Object? id = null,
     Object? name = null,
+    Object? imageUrl = null,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -63,6 +65,10 @@ class _$ArticleCategoryModelCopyWithImpl<$Res,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      imageUrl: null == imageUrl
+          ? _value.imageUrl
+          : imageUrl // ignore: cast_nullable_to_non_nullable
               as String,
     ) as $Val);
   }
@@ -76,7 +82,7 @@ abstract class _$$ArticleCategoryModelImplCopyWith<$Res>
       __$$ArticleCategoryModelImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String id, String name});
+  $Res call({String id, String name, String imageUrl});
 }
 
 /// @nodoc
@@ -92,6 +98,7 @@ class __$$ArticleCategoryModelImplCopyWithImpl<$Res>
   $Res call({
     Object? id = null,
     Object? name = null,
+    Object? imageUrl = null,
   }) {
     return _then(_$ArticleCategoryModelImpl(
       id: null == id
@@ -102,6 +109,10 @@ class __$$ArticleCategoryModelImplCopyWithImpl<$Res>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
+      imageUrl: null == imageUrl
+          ? _value.imageUrl
+          : imageUrl // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -109,7 +120,8 @@ class __$$ArticleCategoryModelImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$ArticleCategoryModelImpl implements _ArticleCategoryModel {
-  const _$ArticleCategoryModelImpl({this.id = '', this.name = ''});
+  const _$ArticleCategoryModelImpl(
+      {this.id = '', this.name = '', this.imageUrl = ''});
 
   factory _$ArticleCategoryModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$ArticleCategoryModelImplFromJson(json);
@@ -120,10 +132,13 @@ class _$ArticleCategoryModelImpl implements _ArticleCategoryModel {
   @override
   @JsonKey()
   final String name;
+  @override
+  @JsonKey()
+  final String imageUrl;
 
   @override
   String toString() {
-    return 'ArticleCategoryModel(id: $id, name: $name)';
+    return 'ArticleCategoryModel(id: $id, name: $name, imageUrl: $imageUrl)';
   }
 
   @override
@@ -132,12 +147,14 @@ class _$ArticleCategoryModelImpl implements _ArticleCategoryModel {
         (other.runtimeType == runtimeType &&
             other is _$ArticleCategoryModelImpl &&
             (identical(other.id, id) || other.id == id) &&
-            (identical(other.name, name) || other.name == name));
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.imageUrl, imageUrl) ||
+                other.imageUrl == imageUrl));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, id, name);
+  int get hashCode => Object.hash(runtimeType, id, name, imageUrl);
 
   @JsonKey(ignore: true)
   @override
@@ -156,8 +173,10 @@ class _$ArticleCategoryModelImpl implements _ArticleCategoryModel {
 }
 
 abstract class _ArticleCategoryModel implements ArticleCategoryModel {
-  const factory _ArticleCategoryModel({final String id, final String name}) =
-      _$ArticleCategoryModelImpl;
+  const factory _ArticleCategoryModel(
+      {final String id,
+      final String name,
+      final String imageUrl}) = _$ArticleCategoryModelImpl;
 
   factory _ArticleCategoryModel.fromJson(Map<String, dynamic> json) =
       _$ArticleCategoryModelImpl.fromJson;
@@ -166,6 +185,8 @@ abstract class _ArticleCategoryModel implements ArticleCategoryModel {
   String get id;
   @override
   String get name;
+  @override
+  String get imageUrl;
   @override
   @JsonKey(ignore: true)
   _$$ArticleCategoryModelImplCopyWith<_$ArticleCategoryModelImpl>
