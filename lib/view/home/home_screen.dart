@@ -17,7 +17,7 @@ class HomeScreenWidget extends ConsumerWidget {
           children: [
             const Text('hello world.'),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () { context.go('/article'); },
               child: const Text('Go to application')
             ),
           ],

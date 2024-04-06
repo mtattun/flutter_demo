@@ -13,17 +13,19 @@ final goRouter = GoRouter(
             key: state.pageKey,
             child: const HomeScreenWidget()
           );
-      }
-    ),
-    GoRoute(
-      path: '/article',
-      name: 'article',
-      pageBuilder: (context, state) {
-        return MaterialPage(
-          key: state.pageKey,
-          child: const ArticleScreenWidget() 
-        );
       },
+      routes: [
+        GoRoute(
+          path: 'article',
+          name: 'article',
+          pageBuilder: (context, state) {
+            return MaterialPage(
+              key: state.pageKey,
+              child: const ArticleScreenWidget() 
+            );
+          },
+        ),
+      ],
     ),
   ]
 );

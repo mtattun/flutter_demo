@@ -3,3 +3,8 @@ export 'package:flutter_demo/router/router.dart';
 export 'package:flutter_demo/view/home/home_screen.dart';
 export 'package:flutter_riverpod/flutter_riverpod.dart';
 export 'package:go_router/go_router.dart';
+export 'package:freezed_annotation/freezed_annotation.dart';
+export 'package:flutter_demo/core/fakes/fakes.dart';
+export 'package:flutter_demo/service/api_service.dart';
+export 'package:flutter_demo/model/article/article_model.dart';
+export 'package:flutter_demo/model/article_category/article_category_model.dart';

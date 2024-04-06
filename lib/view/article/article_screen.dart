@@ -5,7 +5,19 @@ class ArticleScreenWidget extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return Container(
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('flutter demo application'),
+        backgroundColor: Colors.blue,
+      ),
+      body: const Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('welcome article page.'),
+          ],
+        ),
+      ),
     );
   }
 }
