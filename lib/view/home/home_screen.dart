@@ -6,23 +6,91 @@ class HomeScreenWidget extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    // ignore: unused_local_variable
+    final articleProvider = ref.watch(articlePageProvider);
+
     return Scaffold(
       appBar: AppBar(
-        title: const Text('flutter demo application'),
-        backgroundColor: Colors.blue,
+        title: const Text('News app'),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Text('hello world.'),
-            ElevatedButton(
-              onPressed: () { context.go('/article'); },
-              child: const Text('Go to application')
-            ),
-          ],
-        ),
-      ),
+      body: 
+      ListView(
+        children: [
+          // すべて
+          Container(
+            width: double.infinity,
+            child: Column(
+              children: [
+                // all
+                const HeadlineTemplate(text: "すべて"),
+                articleProvider.all.maybeWhen(
+                  orElse: CircularProgressIndicator.new,
+                  data: (value) {
+                    return ArticleListView(articles: value);
+                  }
+                ),
+                // business
+                const HeadlineTemplate(text: "ビジネス"),
+                articleProvider.business.maybeWhen(
+                  orElse: CircularProgressIndicator.new,
+                  data: (value) {
+                    return ArticleListView(articles: value);
+                  }
+                ),
+                // entertainment
+                const HeadlineTemplate(text: "エンターテインメント"),
+                articleProvider.entertainment.maybeWhen(
+                  orElse: CircularProgressIndicator.new,
+                  data: (value) {
+                    return ArticleListView(articles: value);
+                  }
+                ),
+                // general
+                const HeadlineTemplate(text: "一般"),
+                articleProvider.general.maybeWhen(
+                  orElse: CircularProgressIndicator.new,
+                  data: (value) {
+                    return ArticleListView(articles: value);
+                  }
+                ),
+                // health
+                const HeadlineTemplate(text: "医療"),
+                articleProvider.health.maybeWhen(
+                  orElse: CircularProgressIndicator.new,
+                  data: (value) {
+                    return ArticleListView(articles: value);
+                  }
+                ),
+                // science
+                const HeadlineTemplate(text: "サイエンス"),
+                articleProvider.science.maybeWhen(
+                  orElse: CircularProgressIndicator.new,
+                  data: (value) {
+                    return ArticleListView(articles: value);
+                  }
+                ),
+                // sports
+                const HeadlineTemplate(text: "スポーツ"),
+                articleProvider.sports.maybeWhen(
+                  orElse: CircularProgressIndicator.new,
+                  data: (value) {
+                    return ArticleListView(articles: value);
+                  }
+                ),
+                // technology
+                const HeadlineTemplate(text: "テクノロジー"),
+                articleProvider.technology.maybeWhen(
+                  orElse: CircularProgressIndicator.new,
+                  data: (value) {
+                    return ArticleListView(articles: value);
+                  }
+                ),
+                
+              ],
+            )
+          ),
+        ],
+      )
     );
   }
 }
