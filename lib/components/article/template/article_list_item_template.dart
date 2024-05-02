@@ -41,6 +41,7 @@ class ArticleListItemTemplate extends ConsumerWidget {
                   style: const TextStyle(
                     fontSize: 12,
                     color: Colors.grey,
+                    overflow: TextOverflow.ellipsis,
                   ),
                 ),
                 Text(
