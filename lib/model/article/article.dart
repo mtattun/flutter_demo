@@ -1,5 +1,5 @@
 import 'package:flutter_demo/importer.dart';
-import 'package:flutter_demo/model/source/source.dart';
+import 'package:flutter_demo/model/article/source.dart';
 
 part 'article.freezed.dart';
 part 'article.g.dart';

@@ -14,7 +14,7 @@ class ArticleListItemTemplate extends ConsumerWidget {
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(20),
-            child: Container(
+            child: SizedBox(
               height: 200,
               width: 300,
               child: FittedBox(

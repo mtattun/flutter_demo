@@ -16,3 +16,5 @@ export 'package:flutter_demo/components/article/view/article_list_view.dart';
 export 'package:flutter_demo/view_model/article/article_page_notifier.dart';
 export 'package:flutter_demo/components/article/template/article_list_item_template.dart';
 export 'package:envied/envied.dart';
+export 'dart:io';
+export 'package:http_mock_adapter/http_mock_adapter.dart';

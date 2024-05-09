@@ -17,7 +17,7 @@ class HomeScreenWidget extends ConsumerWidget {
       ListView(
         children: [
           // すべて
-          Container(
+          SizedBox(
             width: double.infinity,
             child: Column(
               children: [
@@ -85,7 +85,6 @@ class HomeScreenWidget extends ConsumerWidget {
                     return ArticleListView(articles: value);
                   }
                 ),
-                
               ],
             )
           ),

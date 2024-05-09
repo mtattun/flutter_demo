@@ -6,7 +6,7 @@ class ArticleListView extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-   return Container(
+   return SizedBox(
       height: 300,
       width: double.infinity,
       child: SingleChildScrollView(
