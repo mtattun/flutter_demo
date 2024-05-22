@@ -1,4 +1,5 @@
 // Project imports:
+import 'package:flutter_demo/const/root_path.dart';
 import 'package:flutter_demo/importer.dart';
 
 class HomeScreenWidget extends ConsumerWidget {
@@ -6,7 +7,6 @@ class HomeScreenWidget extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    // ignore: unused_local_variable
     final articleProvider = ref.watch(articlePageProvider);
 
     return Scaffold(
@@ -29,62 +29,66 @@ class HomeScreenWidget extends ConsumerWidget {
                     return ArticleListView(articles: value);
                   }
                 ),
-                // business
-                const HeadlineTemplate(text: "ビジネス"),
-                articleProvider.business.maybeWhen(
-                  orElse: CircularProgressIndicator.new,
-                  data: (value) {
-                    return ArticleListView(articles: value);
-                  }
+                ElevatedButton(
+                  onPressed:() => context.push(RouterPath.sampleForm),
+                  child: const Text("sample form")
                 ),
-                // entertainment
-                const HeadlineTemplate(text: "エンターテインメント"),
-                articleProvider.entertainment.maybeWhen(
-                  orElse: CircularProgressIndicator.new,
-                  data: (value) {
-                    return ArticleListView(articles: value);
-                  }
-                ),
-                // general
-                const HeadlineTemplate(text: "一般"),
-                articleProvider.general.maybeWhen(
-                  orElse: CircularProgressIndicator.new,
-                  data: (value) {
-                    return ArticleListView(articles: value);
-                  }
-                ),
-                // health
-                const HeadlineTemplate(text: "医療"),
-                articleProvider.health.maybeWhen(
-                  orElse: CircularProgressIndicator.new,
-                  data: (value) {
-                    return ArticleListView(articles: value);
-                  }
-                ),
-                // science
-                const HeadlineTemplate(text: "サイエンス"),
-                articleProvider.science.maybeWhen(
-                  orElse: CircularProgressIndicator.new,
-                  data: (value) {
-                    return ArticleListView(articles: value);
-                  }
-                ),
-                // sports
-                const HeadlineTemplate(text: "スポーツ"),
-                articleProvider.sports.maybeWhen(
-                  orElse: CircularProgressIndicator.new,
-                  data: (value) {
-                    return ArticleListView(articles: value);
-                  }
-                ),
-                // technology
-                const HeadlineTemplate(text: "テクノロジー"),
-                articleProvider.technology.maybeWhen(
-                  orElse: CircularProgressIndicator.new,
-                  data: (value) {
-                    return ArticleListView(articles: value);
-                  }
-                ),
+                // // business
+                // const HeadlineTemplate(text: "ビジネス"),
+                // articleProvider.business.maybeWhen(
+                //   orElse: CircularProgressIndicator.new,
+                //   data: (value) {
+                //     return ArticleListView(articles: value);
+                //   }
+                // ),
+                // // entertainment
+                // const HeadlineTemplate(text: "エンターテインメント"),
+                // articleProvider.entertainment.maybeWhen(
+                //   orElse: CircularProgressIndicator.new,
+                //   data: (value) {
+                //     return ArticleListView(articles: value);
+                //   }
+                // ),
+                // // general
+                // const HeadlineTemplate(text: "一般"),
+                // articleProvider.general.maybeWhen(
+                //   orElse: CircularProgressIndicator.new,
+                //   data: (value) {
+                //     return ArticleListView(articles: value);
+                //   }
+                // ),
+                // // health
+                // const HeadlineTemplate(text: "医療"),
+                // articleProvider.health.maybeWhen(
+                //   orElse: CircularProgressIndicator.new,
+                //   data: (value) {
+                //     return ArticleListView(articles: value);
+                //   }
+                // ),
+                // // science
+                // const HeadlineTemplate(text: "サイエンス"),
+                // articleProvider.science.maybeWhen(
+                //   orElse: CircularProgressIndicator.new,
+                //   data: (value) {
+                //     return ArticleListView(articles: value);
+                //   }
+                // ),
+                // // sports
+                // const HeadlineTemplate(text: "スポーツ"),
+                // articleProvider.sports.maybeWhen(
+                //   orElse: CircularProgressIndicator.new,
+                //   data: (value) {
+                //     return ArticleListView(articles: value);
+                //   }
+                // ),
+                // // technology
+                // const HeadlineTemplate(text: "テクノロジー"),
+                // articleProvider.technology.maybeWhen(
+                //   orElse: CircularProgressIndicator.new,
+                //   data: (value) {
+                //     return ArticleListView(articles: value);
+                //   }
+                // ),
               ],
             )
           ),
