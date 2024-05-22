@@ -58,6 +58,7 @@ class SampleFormScreen extends HookConsumerWidget {
                         } else {
                           // 初期値がtrueで初回はボタンが押せるため、検証失敗したらfalseを格納する
                           validState.value = false;
+                          showSnackBar(context, "has error!");
                         }
                       }
                     : null,

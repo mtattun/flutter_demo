@@ -21,3 +21,4 @@ export 'package:flutter_demo/app_theme.dart';
 export 'package:hooks_riverpod/hooks_riverpod.dart';
 // ignore: depend_on_referenced_packages
 export 'package:flutter_hooks/flutter_hooks.dart';
+export 'package:flutter_demo/components/common/snack_bar.dart';
